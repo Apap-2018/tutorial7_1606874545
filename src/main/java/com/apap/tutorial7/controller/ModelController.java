@@ -39,7 +39,7 @@ public class ModelController {
 	private Object modelCar(@RequestParam("factory") String factory) throws Exception {
 		HttpHeaders headers = new HttpHeaders();
         headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
-        headers.add("user-agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36");
+        headers.add("user-agent", "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36 OPR/56.0.3051.52");
         HttpEntity<String> entity = new HttpEntity<String>("parameters", headers);
         String year = Integer.toString(Calendar.getInstance().get(Calendar.YEAR));
         String path = Setting.modelUrl + "/?cmd=getModels&make=" + factory + "&year=" + year;
